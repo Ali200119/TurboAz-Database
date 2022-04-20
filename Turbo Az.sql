@@ -1,0 +1,3 @@
+CREATE DATABASE TurboAz
+
+USE TurboAz
