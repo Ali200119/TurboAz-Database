@@ -4,14 +4,14 @@ USE TurboAz
 
 CREATE TABLE Marka
 (
-	ID int primary key identity,
+	Marka_ID int primary key identity,
 	Name nvarchar(35) UNIQUE
 )
 
 CREATE TABLE Model
 (
-	ID int primary key identity,
-	Marka_ID int references Marka(ID),
+	Model_ID int primary key identity,
+	Marka_ID int references Marka(Marka_ID),
 	Name nvarchar(35) UNIQUE,
 	Yurush int,
 	Price int
@@ -62,3 +62,15 @@ CREATE TABLE Suretler_qutusu
 ALTER TABLE Model ADD Buraxilish_ili int
 ALTER TABLE Model ADD Muherrikin_hecmi int
 ALTER TABLE Model ADD Muherrikin_gucu int
+
+CREATE TABLE Elan
+(
+	Model_ID int references Model(Model_ID),
+	Ban_Novu_ID int references Ban_Novu(Ban_Novu_ID),
+	Metric_System_ID int references Metric_System(Metric_System_ID),
+	Reng_ID int references Reng(Reng_ID),
+	Currency_ID int references Currency(Currency_ID),
+	Yanacaq_Novu_ID int references Yanacaq_Novu(Yanacaq_Novu_ID),
+	Oturucu_ID int references Oturucu(Oturucu_ID),
+	Suretler_qutusu_ID int references Suretler_qutusu(Suretler_qutusu_ID),
+)
