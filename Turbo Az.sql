@@ -74,3 +74,29 @@ CREATE TABLE Elan
 	Oturucu_ID int references Oturucu(Oturucu_ID),
 	Suretler_qutusu_ID int references Suretler_qutusu(Suretler_qutusu_ID),
 )
+
+SELECT * FROM Elan e
+JOIN Model m
+ON
+e.Model_ID=m.Model_ID
+JOIN Ban_Novu bn
+ON
+e.Ban_Novu_ID=bn.Ban_Novu_ID
+JOIN Metric_System ms
+ON
+e.Metric_System_ID=ms.Metric_System_ID
+JOIN Reng r
+ON
+e.Reng_ID=r.Reng_ID
+JOIN Currency c
+ON
+e.Currency_ID=c.Currency_ID
+JOIN Yanacaq_Novu yn
+ON
+e.Yanacaq_Novu_ID=yn.Yanacaq_Novu_ID
+JOIN Oturucu o
+ON
+e.Oturucu_ID=o.Oturucu_ID
+JOIN Suretler_qutusu sq
+ON
+e.Suretler_qutusu_ID=sq.Suretler_qutusu_ID
