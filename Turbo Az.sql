@@ -72,7 +72,7 @@ CREATE TABLE Elan
 	Currency_ID int references Currency(Currency_ID),
 	Yanacaq_Novu_ID int references Yanacaq_Novu(Yanacaq_Novu_ID),
 	Oturucu_ID int references Oturucu(Oturucu_ID),
-	Suretler_qutusu_ID int references Suretler_qutusu(Suretler_qutusu_ID),
+	Suretler_qutusu_ID int references Suretler_qutusu(Suretler_qutusu_ID)
 )
 
 SELECT * FROM Elan e
